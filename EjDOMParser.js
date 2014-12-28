@@ -9,7 +9,7 @@ window.DOMParser.prototype.parseFromString = function(str, type) {
 
   // based on https://github.com/Constellation/domlike
   str = str.replace(/(?:<!--[^>]*-->|\n)/g, '');
-  var nodeParent = node = result = document.createElement(),
+  var nodeParent = node = result = document.createElement(''),
     nodes = str.match(/(?:<([\/]?)([^>\s\/]*)\s*([^>]*)>|[^<>]*)/g);
 
   nodes.forEach(function(e, index, nodes) {
